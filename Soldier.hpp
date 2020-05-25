@@ -17,6 +17,7 @@ public:
         this->type = ty;
         this->commander=c;
     }
+    virtual ~Soldier(){}
     virtual void attack(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> source)= 0;
     virtual void resetlife() = 0;
     void print(std::vector<std::vector<Soldier*>> &board,std::pair<int,int> source){

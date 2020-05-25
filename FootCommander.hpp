@@ -8,6 +8,8 @@ using namespace std;
 class FootCommander: public Soldier {
 public:
     FootCommander(int t) : Soldier(150,20,t,1,true){}
+        virtual ~FootCommander(){}
+
    Soldier* getSold(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> source,std::map<std::string,int> &m){
         if (source.first>=0 && source.first < board.size() && source.second >= 0 && source.second < board[0].size())
         {

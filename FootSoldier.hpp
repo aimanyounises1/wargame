@@ -6,6 +6,8 @@
 
 class FootSoldier: public Soldier {
 public:
+    virtual ~FootSoldier(){}
+
     FootSoldier(int t) : Soldier(100,10,t,1,false){}
     Soldier* getSold(std::vector<std::vector<Soldier*>> &board, std::pair<int,int> source){
         if (source.first>=0 && source.first < board.size() && source.second >= 0 && source.second < board[0].size())

@@ -20,18 +20,14 @@ namespace WarGame {
         soldier->attack(board,source);
 
     }
-    void Board :: changePlace(std::pair<int,int> source){
+    Soldier* Board :: changePlace(std::pair<int,int> source){
         int r = source.first;
         int c = source.second;
         if(r >= board.size() || c >= board[0].size() ||r<0 || c<0){
           throw std::invalid_argument("out Of Bound");
         }
         Soldier* temp = this->board[r][c];
-        if (temp==nullptr)
-        {
-            return;
-        }
-        throw std::invalid_argument("place is taken");
+      return temp;
     }
 
     void Board:: move(uint player_number, std::pair<int,int> source, MoveDIR direction){
